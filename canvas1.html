@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+canvas {
+  border: 1px solid black;
+}
+</style>
+<script>
+//Access rendering context
+function init() {
+	//get context
+	var ctx=document.getElementById('canvas').getContext('2d');
+	/* draw a filled rectangle */
+	// starts the drawing
+	ctx.beginPath();
+	// define 
+	ctx.rect(10,20,250,175);
+	ctx.closePath();
+	ctxfillStyle = "rgb(225,0,0)";
+	ctx.fill();
+} //end initiate function
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="450"></canvas>
+<br />
+<button type='button' onclick='init();'>Draw</button>
+
+</body>
+</html>

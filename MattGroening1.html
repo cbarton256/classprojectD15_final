@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Matt Groening Dynamic List</title>
+<script src="js/dynamic_table.js"></script>
+</head>
+<body>
+  <h2>Matt Groening's favorite Simpson episodes</h2>
+  <ol id="theList">
+    <li id="7F06">Bart the Daredevil</li>
+    <li id="7G11">Life on the Fast Lane</li>
+    <li id="3F20">Much Apu About Nothing</li>
+    <li id="8F18">A Streetcar Named Marge</li>
+    <li id="4F18">In Marge We Trust</li>
+    <li id="4F19">Homer&lsquo;s Enemy</li>
+    <li id="4F02">Treehouse of Horror VII</li>
+    <li id="5F18">Natural Born Kissers</li>
+    <li id="7G12">Krusty Gets Busted</li>
+    <li id="7G04">There&lsquo;s No Disgrace Like Home</li>
+  </ol>
+<fieldset>
+<legend>List Manager</legend>
+<form>
+<label for="getInput">Title:</label>
+<input type="text" id="getInput" />
+<button type="button" onclick="addElement();">Add</button>
+<button type="reset">Reset</button>
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Display Manager</legend>
+<label for="color1">Color #1:</label>
+<input type="color" id="color1" value="yellow"><br />
+<label for="color2">Color #2:</label>
+<input type="color" id="color2" value="limeGreen"><br />
+<button type="button" onclick="setColors(color1,color2);">Color</button>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+canvas {
+  border: 1px solid black;
+}
+</style>
+<script>
+//Access rendering context
+function init() {
+	//get context
+	var ctx=document.getElementById('canvas').getContext('2d');
+	/* draw a gradient filled rectangle */
+	// define gradient area
+	var linGrad = ctx.createLinearGradient(20,20,75,125);
+	//create color gradient scheme
+	linGrad.addColorStop(0.25,'rgb(16,0,0)');
+	linGrad.addColorStop(0.50,'rgb(128,0,0)');
+	linGrad.addColorStop(1.00,'rgb(255,0,0)');
+	// starts the drawing
+	ctx.beginPath();
+	// define 
+	ctx.rect(20,20,250,175);
+	ctx.closePath();
+	ctxfillStyle = "rgb(225,0,0)";
+	ctx.fill();
+} //end initiate function
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="450"></canvas>
+<br />
+<button type='button' onclick='init();'>Draw</button>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<title>jqm</title>
+</head>
+<body>
+
+	<div data-role="page" id="p1">
+		<div data-role="header">
+			<h1>Page title</h1>
+		</div>
+		<div data-role="content">
+			Page 1 body
+			
+			<p><a href="#p3" data-rel="dialog" data-transition="slidedown">
+				YouTube</a></p>
+			<p><a href="#p2" data-rel="dialog">
+				Go to page two dialog</a></p>
+		</div>
+		<div data-role="footer">
+			Page 1 footer
+		</div>
+	</div>
+	
+	<div data-role="page" id="p3">
+		<div data-role="header">
+			<h1>youtube</h1>
+		</div>
+		<div data-role="content">
+			<iframe width="100%" height="360" 
+				src="http://www.youtube.com/embed/3PuHGKnboNY" frameborder="0">
+				</iframe>
+		</div>
+	</div>
+	
+	<div data-role="page" id="p2">
+		<div data-role="header">
+			<h1>Page 2 title</h1>
+		</div>
+		<div data-role="content">
+			Page 2 body
+		</div>
+	</div>
+	
+</body>
+</html>

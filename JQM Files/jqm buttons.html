@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<title>jqm</title>
+</head>
+<body>
+
+	<div data-role="page" id="p1">
+		<div data-role="header">
+			<h1>Page title</h1>
+		</div>
+		<div data-role="content">
+			Page 1 body 
+			<a href="#p2" data-role="button" data-inline="true">
+				Page 2</a>
+			
+			<p><a href="#p2" data-role="button" data-rel="dialog">
+				Go to page two dialog</a></p>
+				
+		</div>
+		<div data-role="footer">
+			Page 1 footer
+		</div>
+	</div>
+	
+	
+	<div data-role="page" id="p2">
+		<div data-role="header">
+			<h1>Page 2 title</h1>
+		</div>
+		<div data-role="content">
+				
+			<p>
+				<a href="#p1">Link</a>
+				<a href="#p1" data-role="button">Button Basic</a>
+				<a href="#p1" data-role="button" 
+					data-corners="false">Button No corners</a>
+				<a href="#p1" data-role="button" 
+					data-icon="grid">Button with Grid Icon</a>
+				<a href="#p1" data-role="button" 
+					data-iconpos="right"
+					data-icon="check">Button with Icon Right</a>
+				<a href="#p1" data-role="button" 
+					data-iconpos="notext"
+					data-icon="home">Button Icon no text</a>
+				<a href="#p1" data-role="button"
+					data-shadow="false">Button No shadow</a>
+			</p>
+				
+			<p>
+				<a href="#p1" data-role="button">Button Basic</a>
+				<a href="#p1" data-role="button" 
+					data-mini="true">Mini</a>
+				<a href="#p1" data-role="button" 
+					data-mini="true" data-icon="refresh">Mini 2</a>
+					
+				<div data-role="controlgroup" data-type="horizontal"
+					data-mini="true">
+					<a href="#p1" data-role="button">Btn1</a>
+					<a href="#p1" data-role="button" 
+						data-icon="plus">Btn2</a>
+					<a href="#p1" data-role="button"
+						data-theme="b" data-icon="check"
+						data-iconpos="right">Btn3</a>
+				</div>
+			</p>
+			
+			<a href="#p1">Back</a>
+		</div>
+	</div>
+	
+</body>
+</html>

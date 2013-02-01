@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>CSS3 Animation | Transition</title>
+
+
+<style>
+/* Initial state */
+#box1 {
+width: 100px;
+height: 200px;
+color: black;
+border: 5px solid blue;
+background-color: orange;
+}
+/* End state */
+#box1:hover {
+height: 100px;
+width: 200px;
+color: white;
+border: 5px solid orange;
+background-color: blue;
+}
+/* Create 2 state transitions */
+#box1 {
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-timing-function: (0.42,0,0.58,2);
+	-webkit-transition-delay: 50ms;
+}
+</style>
+</head>
+<body>
+<div id="box1">
+<p>Lorem ipsum dolor sit amet</p>
+</div>
+</body>
+</html>

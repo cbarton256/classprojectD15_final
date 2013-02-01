@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Dynamic List using JQuery</title>
+
+<script src="js/jquery-1.8.0.js"></script>
+<script>
+$(document).ready(function() {
+//bind click function
+$('#addShow').click(function() {
+// Get input from user
+var newShow = $('#getInput').val();
+//Update DOM subsequently
+$("#theList").append('<li>'+newShow+ '</li>');
+//Update DOM subsequently placement
+// $('<li>' +newShow+'</li>').insertBefore('#8F18');
+});
+
+//bind click function
+$('#setColors').click(function() {
+//color odd & even rows
+$('ol > li:nth-child(odd)').css('background-color', $('#color1').val() );
+$('ol > li:nth-child(even)').css('background-color', $('#color2').val() );
+});
+
+});
+</script>
+
+</head>
+<body>
+<h2>Matt Groening's top favorite Simpson episodes</h2>
+<ol id="theList">
+<li id="7F06">Bart the Daredevil</li>
+<li id="7G11">Life on the Fast Lane</li>
+<li id="3F20">Much Apu About Nothing</li>
+<li id="8F18">A Streetcar Named Marge</li>
+<li id="4F18">In Marge We Trust</li>
+<li id="4F19">Homer&lsquo;s Enemy</li>
+<li id="4F02">Treehouse of Horror VII</li>
+<li id="5F18">Natural Born Kissers</li>
+<li id="7G12">Krusty Gets Busted</li>
+<li id="7G04">There&lsquo;s No Disgrace Like Home</li>
+</ol>
+
+<fieldset>
+<legend>List Manager</legend>
+<form>
+<label for="getInput">Title:</label>
+<input type="text" id="getInput" />
+<button type="button" id="addShow">Add</button>
+<button type="reset">Reset"</button>
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Display Manager</legend>
+<label for="color1">Color #1:</label>
+<input type="color" id="color1" value="yellow"><br />
+<label for="color2">Color #2:</label>
+<input type="color" id="color2" value="limeGreen"><br />
+<button type="button" id="setColors">Color</button>
+</fieldset>
+
+</body>
+</html>

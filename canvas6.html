@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+canvas {
+  border: 1px solid black;
+}
+</style>
+<script>
+//Access rendering context
+function init() {
+	//get context
+	var ctx=document.getElementById('canvas').getContext('2d');
+	/* draw a squiggly line */
+	
+	ctx.beginPath();
+	
+	ctx.moveTo(100,20);
+	ctx.lineTo(200,160);
+	ctx.quadraticCurveTo(230,200,250,120);
+	ctx.bezierCurveTo(290,-40,300,200,400,150);
+	
+	ctx.lineTo(500,90);
+	ctx.strokeStyle='rgb(0,0,255)';
+	ctx.lineWidth=5;
+	
+	ctx.stroke();
+	
+	
+} //end initiate function
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="450"></canvas>
+<br />
+<button type='button' onclick='init();'>Draw</button>
+
+</body>
+</html>

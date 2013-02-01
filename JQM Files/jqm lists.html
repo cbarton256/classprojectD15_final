@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<title>jqm</title>
+</head>
+<body>
+
+	<div data-role="page" id="p1">
+	
+		<div data-role="header">
+			<h1>Page title</h1>
+		</div>
+		<div data-role="content">
+			Page 1 basic list
+			
+			<ul>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+			
+			<a href="#p2">Basic list</a><br />
+			<a href="#p3">Ordered list</a><br />
+			<a href="#p4">Nested list</a><br />
+			<a href="#p5">Inset list</a><br />
+			<a href="#p6">Split button list</a><br />
+			<a href="#p7">List dividors</a><br />
+			<a href="#p8">Bubbles and icons</a><br />
+			<a href="#p9">Search</a><br />
+			<a href="#p10">Search advanced</a>
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="p2">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview">
+				<li>List item</li>
+				<li>List item</li>
+				<li><a href="#p1">List link item</a></li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	<div data-role="page" id="p3">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ol data-role="listview">
+				<li>List item</li>
+				<li>List item</li>
+				<li><a href="#p1">List link item</a></li>
+			</ol>
+				
+		</div>
+	</div>
+	
+	<div data-role="page" id="p4">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview">
+				<li><a href="#p1">List link item</a></li>
+				<li><a href="#p1">List link item</a></li>
+				<li>
+					<h2>Nested title</h2>
+					<p>Find more on nesting at jquerymobile.com</p>
+					<ul data-role="listview">
+						<li><a href="#p4">List link item</a></li>
+					</ul>
+					
+				</li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	
+	<div data-role="page" id="p5">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#p1">List link item</a></li>
+				<li><a href="#p1">List link item</a></li>
+				<li><a href="#p1">List link item</a></li>
+				<li><a href="#p1">List link item</a></li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	<div data-role="page" id="p6">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview" data-split-icon="grid">
+				<li>
+					<a href="#p1">
+						<h3>list item header</h3>
+						<p>list item body text and what not</p>
+					</a>
+					<a href="#p5" data-rel="dialog">More</a>
+				</li>
+				<li>
+					<a href="#p1">
+						<h3>list item header</h3>
+						<p>list item body text and what not</p>
+					</a>
+					<a href="#p5" data-rel="dialog">More</a>
+				</li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	<div data-role="page" id="p7">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview">
+				<li>List item</li>
+				<li>List item</li>
+				<li><a href="#p1">List link item</a></li>
+				<li data-role="list-divider">List dividor</li>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	<div data-role="page" id="p8">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview">
+				<li>
+					<a href="#p1">List link item
+						<span class="ui-li-count">345</span>
+					</a>
+				</li>
+				<li>
+					<a href="#p1">List link item
+						<span class="ui-li-count">23</span>
+					</a>
+				</li>
+				<li>
+					<a href="#p1">
+						<img height="80"
+							src="http://l.yimg.com/bt/api/res/1.2/LrTB2TgAw1Nl6huSbN9SQw--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTc1O3E9ODU7dz0xMDA-/http://media.zenfs.com/en_us/News/ap_webfeeds/147bbd3d188e1b01260f6a70670067c0.jpg" />
+						<h3>Test title</h3>
+						<p>paragraph content</p>
+						<span class="ui-li-count">23</span>
+					</a>
+				</li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	
+	
+	
+	<div data-role="page" id="p9">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#p1">Acura</a></li>
+				<li><a href="#p1">Audi</a></li>
+				<li><a href="#p1">BMW</a></li>
+				<li><a href="#p1">Cadillac</a></li>
+				<li><a href="#p1">Chrysler</a></li>
+				<li><a href="#p1">Dodge</a></li>
+				<li><a href="#p1">Ferrari</a></li>
+				<li><a href="#p1">Ford</a></li>
+				<li><a href="#p1">GMC</a></li>
+				<li><a href="#p1">Honda</a></li>
+				<li><a href="#p1">Hyundai</a></li>
+				<li><a href="#p1">Infiniti</a></li>
+				<li><a href="#p1">Jeep</a></li>
+				<li><a href="#p1">Kia</a></li>
+				<li><a href="#p1">Lexus</a></li>
+				<li><a href="#p1">Mini</a></li>
+				<li><a href="#p1">Nissan</a></li>
+				<li><a href="#p1">Porsche</a></li>
+				<li><a href="#p1">Subaru</a></li>
+				<li><a href="#p1">Toyota</a></li>
+				<li><a href="#p1">Volkswagon</a></li>
+				<li><a href="#p1">Volvo</a></li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	
+	
+	
+	<div data-role="page" id="p10">
+		<div data-role="header"><a href="#p1" data-icon="home">Home</a><h1>Title</h1></div>
+		<div data-role="content">
+		
+			<ul data-role="listview" 
+				data-filter="true" 
+				data-filter-placeholder="Search ticker or firm name..." 
+				data-inset="true">
+				<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li>
+				<li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
+				<li data-role="list-divider">A poorly placed dividor</li>
+				<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
+				<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
+				<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="index.html">IBM</a></li>
+				<li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
+				<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
+				<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
+			</ul>
+				
+		</div>
+	</div>
+	
+	
+</body>
+</html>

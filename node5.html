@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+/* Create new child element */
+function changeNode() {
+	var newImg = document.createElement('img');
+	newImg.setAttribute("src","images/evilHomer_L.gif");
+	var dancing = document.getElementById('bottom');
+	dancing.appendChild(newImg);
+}
+
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif"> <img src="images/evilHomer_L.gif"> <img src="images/evilHomer_L.gif" id="last"></span>
+<br />
+<span id="bottom"><img src="images/evilHomer_R.gif"></span>
+<br />
+<button onclick="changeNode();">Execute</button>
+</body>
+</html>

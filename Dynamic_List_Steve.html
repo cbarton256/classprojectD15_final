@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Dynamic List using JavaScript</title>
+
+<script>
+function addShow() {
+//establish reference to element
+var text = document.getElementById("getInput").value;
+
+//get place where list will be updated
+var place = document.getElementById("8F18");
+
+//create new DOM list node
+var node = document.createElement("li");
+
+//Add text to DOM list node
+node.innerHTML = text;
+
+//Update DOM subsequently
+document.getElementById("theList").appendChild(node);
+
+// Append new show after Much Apu About Nothing
+// and before A Streetcar Named Marge
+//get place where list will be updated
+//var place = document.getElementById("8F18");
+//update list with new input based on placement
+//document.getElementById("theList").insertBefore(node,place);
+}
+
+//set color
+function setColors(color1, color2) {
+//Get table element row information
+var rows = document.getElementById("theList").getElementsByTagName("li");
+
+//Get color inputs in array
+var colors = [color1.value, color2.value];
+
+//for loop
+for( var i = 0; i < rows.length; i++ ) {
+rows[i].style.backgroundColor = colors[i % 2];
+} // end for loop
+} // end set color
+
+</script>
+</head>
+<body>
+<h2>Matt Groening's top favorite Simpson episodes</h2>
+<ol id="theList">
+<li id="7F06">Bart the Daredevil</li>
+<li id="7G11">Life on the Fast Lane</li>
+<li id="3F20">Much Apu About Nothing</li>
+<li id="8F18">A Streetcar Named Marge</li>
+<li id="4F18">In Marge We Trust</li>
+<li id="4F19">Homer&lsquo;s Enemy</li>
+<li id="4F02">Treehouse of Horror VII</li>
+<li id="5F18">Natural Born Kissers</li>
+<li id="7G12">Krusty Gets Busted</li>
+<li id="7G04">There&lsquo;s No Disgrace Like Home</li>
+</ol>
+
+<fieldset>
+<legend>List Manager</legend>
+<form>
+<label for="getInput">Title:</label>
+<input type="text" id="getInput" />
+<button type="button" onclick="addShow();">Add</button>
+<button type="reset">Reset</button>
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Display Manager</legend>
+<label for="color1">Color #1:</label>
+<input type="color" id="color1" value="yellow"><br />
+<label for="color2">Color #2:</label>
+<input type="color" id="color2" value="limeGreen"><br />
+<button onclick="setColors(color1,color2);">Color</button>
+</fieldset>
+
+</body>
+</html>

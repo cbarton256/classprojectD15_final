@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Homer’s Online Music Shop</title>
+<link rel="shortcut icon" href="images/homer.ico" />
+<link rel="stylesheet" href="css/HomerProjectD7.css" />
+<link rel="stylesheet" href="css/nav.css" />
+
+
+<style>
+h3 {
+background: #f0f0f0 url(images/open.png) no-repeat 0px 11px;
+cursor: pointer;
+border: 1px solid #aaaaaa;
+margin: 0px;
+padding: .5em .5em .5em 1em;
+border-radius: 5px;
+}
+h3:hover {
+background-color: #D8D8D8;
+}
+
+h3.close {
+background: #ffffff url(images/close.png) no-repeat 0px 11px;
+border-radius: 5px 5px 0px 0px;
+padding: .5em .5em .5em 1em;
+}
+.answer {
+margin: 0 0 0 0px;
+border: 1px solid #aaaaaa;
+border-radius: 0px 0px 5px 5px;
+padding: 1em;
+overflow: auto;
+</style>
+<script src="js/jquery-1.8.0.js"></script>
+
+<script>
+$(document).ready(function() {
+$('.answer').hide();
+$('.start h3').toggle(
+function() {
+$(this).next('.answer').slideDown();
+$(this).addClass('close');
+},
+function() {
+$(this).next('.answer').fadeOut();
+$(this).removeClass('close');
+}
+); // end toggle
+}); // end ready
+</script>
+<style>
+.slideShow {
+    position: relative;
+    width: 285px;
+    height: 360px;
+}
+.slideShow img {
+    position: absolute;
+    leeft: 0;
+    top: 0;
+}
+</style>
+</head>
+
+<body>
+<header>
+<img src="images/Homer_Rock_and_Roll.jpg" alt="Homer" width="100" height="100" />
+<hgroup>
+<h1>Homer's Music Store</h1>
+<h2>Rock On!</h2>
+</hgroup>
+
+<nav>
+<ul id="main">
+<li><a href="index.html">Home</a></li>
+<li><a href="multi_column.html">Layout</a>
+<ul>
+<li><a href="two_column_left.html">2 Column Float Left</a></li>
+<li><a href="two_column_right.html">2 Column Float Right</a></li>
+<li><a href="three_column.html">3 Column Float</a></li>
+</ul>
+</li>
+<li><a href="table.html">Tables</a>
+<ul>
+<li><a href="dynamic_table.html">Dynamic</a></li>
+<li><a href="web_sql.html">Database</a></li>
+</ul>
+</li>
+<li><a href="slideshow.html">Slide Show</a>
+<ul>
+<li><a href="accordion.html">Accordion</a></li>
+</ul>
+</li>
+<li><a href="video.html">Multimedia</a>
+<ul>
+<li><a href="audio.html">Audio</a></li>
+</ul>
+</li>
+<li><a href="email_form.html">Forms</a>
+<ul>
+<li><a href="product_discount.html">Product Discount</a></li>
+<li><a href="invoice_total.html">Invoice total</a></li>
+</ul>
+</li>
+<li><a href="product.php">Products</a></li>
+<li><a href="images.html">Graphics</a>
+<ul>
+<li><a href="rollover.html">Rollover</a></li>
+<li><a href="svg.html">SVG</a></li>
+<li><a href="canvas.html">Canvas</a></li>
+<li><a href="geolocation.html">Geolocation</a></li>
+<li><a href="cube.html">Animation</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>
+// create function binding nested functions to page loading event
+$(document).ready(function() {
+	// hide all images except first
+	$('.slideShow img:gt(0)').hide();
+	
+	// set timer and use fade effect to replace images
+	setInterval( function() {
+		$('.slideShow :first-child').fadeOut().next('img')
+		    .fadeIn().end().appendTo('.slideShow');
+	}, 3000);
+}); //end bind to page load
+</script>
+</header>
+
+<section id="container">
+<header id="top">
+<h1>Everything Is On Sale for Halloween</h1>
+</header>
+<!-- Content Starts Here -->
+<h2>FAQs with JQuery</h2>
+<p>A mission statement:</p>
+ 
+<p>MyGuitarMan seeks to explore using the Graphic Novel format as a method to organize information held as a database and display possible access paths through it using the symbols used in graphic novels.</p>
+<p></p>
+
+<article class="content">
+<div class="start">
+<h3>MyGuitarMan as a youth…</h3>
+
+<div class="answer">
+    <img src="ch20_guitar_shop/images/CaptainUnderpants.jpg" alt="Underpants" width="199" height="253" />
+</div>
+
+<h3>…and in later life…</h3>
+<div class="answer">
+  <div class="slideShow">
+    <img src="ch20_guitar_shop/images/NakedCowboy1.jpg" alt="Cowboy1" width="199" height="253" />
+    <img src="ch20_guitar_shop/images/NakedCowboy2.jpg" alt="Cowboy2" width="176" height="160" />
+    <img src="ch20_guitar_shop/images/NakedCowboy3.jpg" alt="Cowboy3" width="190" height="265" />
+    <img src="ch20_guitar_shop/images/NakedCowboy4.png" alt="Cowboy4" width="275" height="184" />
+    <img src="ch20_guitar_shop/images/NakedCowboy5.jpg" alt="Cowboy5" width="259" height="195" />
+    <img src="ch20_guitar_shop/images/NakedCowboy6.jpg" alt="Cowboy6" width="194" height="259" />
+    <img src="ch20_guitar_shop/images/NakedCowboy6_Claire.jpg" alt="Cowboy6Claire" width="480" height="360" />
+    <img src="ch20_guitar_shop/images/NakedCowboy7.jpg" alt="Cowboy7" width="194" height="259" />
+    <img src="ch20_guitar_shop/images/NakedCowboy8.jpg" alt="Cowboy8" width="259" height="194" />
+    <img src="ch20_guitar_shop/images/NakedCowboy9.jpg" alt="Cowboy9" width="229" height="220" />
+    <img src="ch20_guitar_shop/images/NakedCowboy10.jpg" alt="Cowboy10" width="194" height="259" />
+        <img src="ch20_guitar_shop/images/NakedCowboy6_Claire.jpg" alt="Cowboy6Claire" width="480" height="360" />
+  </div>
+</div>
+
+<h3>…who could now read Pulitzer Prize winning graphic novels… </h3>
+<div class="answer">
+<img src="ch20_guitar_shop/images/Maus_image.jpg" alt="Maus" width="309" height="163" />
+</div>
+
+<h3>And for the girls in the audience…</h3>
+<div class="answer">
+  <img src="ch20_guitar_shop/images/Eloise_Front_cover.jpg" alt="Eloise Cover" width="238" height="329" />
+  <img src="ch20_guitar_shop/images/Eloise_page_011.jpg" alt="Eloise Page" width="295" height="427" />
+</div>
+
+<h3>And in later life…HERE’S THE HEART OF THE MATTER…Graphic Novel Conventions.</h3>
+<div class="answer">
+<img src="ch20_guitar_shop/images/FunHome3.JPG" alt="FunHome" width="300" height="400" />
+</div>
+
+<h3>Which brings us to the final line...</h3>
+<div class="answer">
+<p>Button</p>
+</div>
+</div>
+</article>
+
+<!-- Content Ends Here -->
+</section>
+<footer>
+<p>&copy; 2012 Homer J. Simpson</p>
+</footer>
+</body>
+</html>
+

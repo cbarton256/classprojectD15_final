@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang=”en”>
+   <head>
+      <meta charset=UTF-8"/>
+      <script src="js/jquery-1.8.0.js"></script>
+      <title>Invoice Total Calculator</title>
+      <!-- add image stuff from day 3 -->
+      <link rel="shortcut icon" href="images/homer.ico"/>
+      <!-- style stuff from day 4 -->
+      <!--  <link rel="stylesheet" href="css/reset.css" /> -->
+      <link rel="stylesheet" href="css/HomerProjectD7.css"/>
+      <link rel="stylesheet" href="css/nav.css"/>
+      <script src="js/calculator_jquery.js"></script>
+      <style>
+      /* Layout */
+      form {
+         width: 450px;
+         margin: 0 auto;
+         padding: 15px;
+      }
+      label {
+         width: 10em;
+         padding-right: 1em;
+         float: left;
+      }
+      #data input {
+         float: left;
+         width: 15em;
+         margin-bottom: .5em;
+      }
+      #buttons input {
+         float: left;
+         margin-bottom: .5em;
+      }
+      br {
+         clear: left;
+      }
+      #mainContent {
+         text-align: center;
+      }
+      /* Presentation */
+      form {
+         border: 2px solid navy;
+      }
+      #mainContent {
+         color: navy;
+      }
+      </style>
+   </head>
+   <body>
+       <header>
+       <img src="images/Homer_Rock_and_Roll.jpg"
+            alt="Homer" width="100" height="100">
+       <hgroup>
+          <h1>Homer's Music Store</h1>
+          <h2>Rock On!</h2>
+       </hgroup>
+          <nav>
+            <a href="invoice_total.html">Home</a>
+            <a href="email_form.html">Forms</a>
+            <a href="multi_columnPD.html">Layout</a>
+            <a href="table.html">Tables</a>
+            <a href="images.html">Graphics</a>
+            <a href="video.html">Multimedia</a>
+            <a href="static_form.html">Forms</a>
+            <a href="product.php">Products</a>
+            <a href="geolocation.html">Maps</a>
+          </nav>
+       </header>
+       <section id="container">
+       <header id="top">
+          <h1>Everything is on sale for Halloween</h1>
+       </header>
+       <h2 id="mainContent">Product Invoice Calculator</h2>
+       <form>
+       <!-- Data Entry -->
+          <div id="data">
+             <label>Product Description:</label>         
+             <input type="text" id="productDescription"/><br />
+             
+             <label>Customer Type:</label>
+             <select name="type" id="type">
+                <option value="R">Retail</option>
+                <option value="C">Commercial</option>
+             </select><br />
+             
+             <label>List Price:</label>
+             <input type="number" id="listPrice" /><br />
+             
+             <label>Discount Percent:</label>
+             <input type="number" id="discountPercent" disabled/>%<br />
+             
+          </div>
+       <!-- Submit -->
+          <div id="buttons">
+             <label>&nbsp;</label>
+             <input type="button" value="Calculate Discount" id="calculate"/><br />
+          </div>
+          
+          <!-- output for JavaScript -->
+          <div id="output">
+            <label>Discount Amount:</label>
+            <output id="discount" for="listPrice discountPercent">
+               </output><br/>
+            
+            <label>Discount Price:</label>
+            <output id="discountPrice" for="listPrice discount">
+               </output><br/>
+          </div>
+       <!-- today's date -->
+       <br />
+       <script>getToday();</script>
+       <noscript>You must enable JavaScript for this application.</noscript>
+       </form>
+       </section>
+      <footer>
+          <p>&copy; 2012 Homer J. Simpson</p>
+      </footer>
+   </body>
+</html>

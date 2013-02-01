@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<title>jqm</title>
+</head>
+<body>
+
+	<div data-role="page" id="p1">
+	
+		<div data-role="header">
+			<a href="#p2" data-icon="home">Left</a>
+			<h1>Page title</h1>
+			<a href="#p2" data-icon="gear">Edit</a>
+		</div>
+		<div data-role="content">
+			Page 1 body 
+			
+			<a href="#p2" data-role="button" data-inline="true" data-rel="dialog">
+				Page 2</a>
+			<a href="#p3">Page 3</a>
+				
+		</div>
+		<div data-role="footer" data-position="fixed">
+			Page 1 footer
+		</div>
+	</div>
+	
+	
+	<div data-role="page" id="p2">
+		<div data-role="header">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#p1" data-role="button" data-icon="delete">Delete</a>
+				<a href="#p1" data-role="button" data-icon="check">Save</a>
+			</div>
+		</div>
+		<div data-role="content">
+				
+			<p>
+				<a href="#p1">Link</a>
+				<a href="#p1" data-role="button">Button Basic</a>
+				<a href="#p1" data-role="button" 
+					data-corners="false">Button No corners</a>
+				<a href="#p1" data-role="button" 
+					data-icon="grid">Button with Grid Icon</a>
+				<a href="#p1" data-role="button" 
+					data-iconpos="right"
+					data-icon="check">Button with Icon Right</a>
+				<a href="#p1" data-role="button" 
+					data-iconpos="notext"
+					data-icon="home">Button Icon no text</a>
+				<a href="#p1" data-role="button"
+					data-shadow="false">Button No shadow</a>
+			</p>
+			
+			<a href="#p1">Back</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="p3">
+	
+		<div data-role="header">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#p1" data-icon="home">Home</a></li>
+					<li><a href="#p1">Page</a></li>
+					<li><a href="#p1" data-icon="info">Page</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			Page body 
+		</div>
+		
+	</div>
+	
+</body>
+</html>

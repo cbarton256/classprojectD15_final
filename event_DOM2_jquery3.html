@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+<meta  charset=UTF-8">
+<script src="js/jquery-1.8.0.js"></script>
+<title>DOM handling jquery</title>
+<style>
+div {
+  padding: 30px;
+}
+#orange {
+  width: 300px;
+  background-color: orange;
+}
+#green {
+  background-color: limeGreen;
+}
+#blue {
+  background-color: cyan;
+}
+</style>
+<script>
+// create function binding nested functions to page loading event
+$(document).ready( function() {
+	$('#orange').click(function(){
+		alert("Orange Block was clicked");
+	});
+	$('#green').click(function(event) {
+		event.stopPropagation();
+		alert("Green Block was clicked");
+	});
+   // bind click event listener frunction to element id
+   $('#blue').click( function() {
+      // create alert
+      alert("Blue Block was clicked");
+   });
+});
+</script>
+</head>
+<body>
+<div id="orange">
+  <div id="green">
+     <div id="blue">Click here</div>
+  </div>
+</div>
+
+</body>
+</html>

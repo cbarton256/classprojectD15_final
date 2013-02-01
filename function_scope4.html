@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>function_scope4</title>
+<script>
+function globalFunction(){
+	alert('global function');
+}
+function containerFunction(){
+	var subFunction = function() {
+	    alert('container subfunction');
+		globalFunction();
+	}
+	subFunction();
+}
+containerFunction();
+</script>
+</head>
+<body>
+
+</body>
+</html>

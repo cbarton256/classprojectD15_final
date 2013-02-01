@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+canvas {
+  border: 1px solid black;
+}
+</style>
+<script>
+//Access rendering context
+function init() {
+	//get context
+	var ctx=document.getElementById('canvas').getContext('2d');
+	/* draw a filled circle */
+	
+	ctx.beginPath();
+	// define 
+	ctx.arc(450,150,100,0,Math.PI*2,true);
+	ctx.closePath();
+	ctxfillStyle = "rgb(0,225,0)";
+	ctx.fill();
+} //end initiate function
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="450"></canvas>
+<br />
+<button type='button' onclick='init();'>Draw</button>
+
+</body>
+</html>

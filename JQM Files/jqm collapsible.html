@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<title>jqm</title>
+</head>
+<body>
+
+	<div data-role="page" id="p1">
+	
+		<div data-role="header">
+			<h1>Collapse me</h1>
+		</div>
+		<div data-role="content">
+			
+			<div data-role="collapsible" 
+				data-inset="false"
+				data-mini="true"
+				data-iconpos="right"
+				data-collapsed-icon="grid"
+				data-expanded-icon="arrow-d"
+				data-collapsed="false">
+				
+				<h3>Collapse header</h3>
+				<p>The content that lurks beneath...</p>
+				<div data-role="collapsible">
+					<h3>Nested Collapse</h3>
+					hidden content
+				</div>
+			</div>
+			
+			<div data-role="collapsible-set">
+			
+				<div data-role="collapsible">
+					<h3>Accordion Collapse 1</h3>
+					hidden content 1
+				</div>
+			
+				<div data-role="collapsible">
+					<h3>Accordion Collapse 2</h3>
+					hidden content 2
+				</div>
+			
+				<div data-role="collapsible">
+					<h3>Accordion Collapse 3</h3>
+					hidden content 3
+				</div>
+				
+			</div>
+				
+		</div>
+		
+	</div>
+	
+</body>
+</html>
